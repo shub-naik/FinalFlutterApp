@@ -24,9 +24,8 @@ class _MainDashBoardState extends State<MainDashBoard> {
   List<Widget> _screen = [
     _userHomeTab,
     _weatherInfoTab,
-    _cameraDiseasePredictionTab,
-    _helpLine
-  ];
+    _cameraDiseasePredictionTab
+    ];
 
   void _pageChanged(int index) {
     setState(() {
@@ -80,8 +79,6 @@ class _MainDashBoardState extends State<MainDashBoard> {
               title: Text('Weather Info'), icon: WeatherIcons.cloud),
           TitledNavigationBarItem(
               title: Text('Disease Prediction'), icon: Icons.camera),
-          TitledNavigationBarItem(
-              title: Text('HelpLine'), icon: Icons.live_help),
         ],
         activeColor: Colors.black,
         inactiveColor: Colors.blueGrey,
