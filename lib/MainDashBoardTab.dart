@@ -39,22 +39,28 @@ class _MainDashBoardTabState extends State<MainDashBoardTab> {
                   return Card(
                     child: Padding(
                       padding: EdgeInsets.all(20.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: <Widget>[
-                          Text("Name: " + new_data[index]['name']),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text("symptoms: " + new_data[index]['symptoms']),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text("preventive_measures: " +
-                              preventiveMeasuresFun(
-                                  new_data[index]['preventive_measures']))
-                        ],
-                      ),
+                      child:new GestureDetector(
+                              onTap: () {
+
+                              },
+                              child:Column(
+                                     crossAxisAlignment: CrossAxisAlignment.stretch,
+                                     children: <Widget>[
+                                     Image.network(new_data[index]['images'][0])
+                                       Text("Name: " + new_data[index]['name']),
+                                       SizedBox(
+                                         height: 10,
+                                       ),
+                                       Text("symptoms: " + new_data[index]['symptoms']),
+                                       SizedBox(
+                                         height: 10,
+                                       ),
+                                       Text("preventive_measures: " +
+                                           preventiveMeasuresFun(
+                                               new_data[index]['preventive_measures']))
+                                     ],
+                                   ),
+                            ),
                     ),
                   );
                 },
