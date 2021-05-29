@@ -37,6 +37,9 @@ class _MainDashBoardState extends State<MainDashBoard> {
     if (value == 'NewsInfo') {
       Navigator.pushNamed(context, '/NewsInfo');
     }
+    if (value == 'BotPredict') {
+      Navigator.pushNamed(context, '/BotPredict');
+    }
   }
 
   @override
@@ -54,6 +57,10 @@ class _MainDashBoardState extends State<MainDashBoard> {
               PopupMenuItem(
                 value: "NewsInfo",
                 child: Text("NewsInfo"),
+              ),
+              PopupMenuItem(
+                value: "BotPredict",
+                child: Text("BotPredict"),
               ),
             ],
           )
